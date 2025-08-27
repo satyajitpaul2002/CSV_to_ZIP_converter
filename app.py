@@ -21,9 +21,9 @@ if uploaded_file is not None:
 
     # Select only required columns (if they exist)
     required_cols = [
-        "First Name", "Last Name", "Email", "Mobile No",
+        "First Name", "Last Name", "Mobile No",
         "Highest qualification", "Work Experience",
-        "Location", "Sub-Location", "State"
+        "Location", "State", "Highest qualification Passout year"
     ]
     df = df[[col for col in required_cols if col in df.columns]]
 
