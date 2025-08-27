@@ -29,6 +29,7 @@ if uploaded_file is not None:
 
     # Create ZIP buffer to store images
     zip_buffer = io.BytesIO()
+    
     with zipfile.ZipFile(zip_buffer, "w") as zf:
         # Process in chunks of 5
         for i in range(0, len(df), 5):
