@@ -32,8 +32,8 @@ if uploaded_file is not None:
 
     with zipfile.ZipFile(zip_buffer, "w") as zf:
         # Process in chunks of 5
-        for i in range(0, len(df), 5):
-            chunk = df.iloc[i:i+5]
+        for i in range(0, len(df), 6):
+            chunk = df.iloc[i:i+6]
 
             fig, ax = plt.subplots(figsize=(20, 2 + 0.6*len(chunk)))
             ax.axis('off')
@@ -54,7 +54,7 @@ if uploaded_file is not None:
             img_buffer.seek(0)
 
             # Add to zip
-            zf.writestr(f"chunk_{i//5 + 1}.jpg", img_buffer.read())
+            zf.writestr(f"chunk_{i//6 + 1}.jpg", img_buffer.read())
 
     # Download button for ZIP
     st.download_button(
