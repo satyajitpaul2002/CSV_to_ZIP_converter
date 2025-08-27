@@ -63,4 +63,7 @@ if uploaded_file is not None:
         file_name="chunks_images.zip",
         mime="application/zip"
     )
-st.title("satyajit")
+st.markdown(
+    "<p style='text-align: center; font-size: 12px; color: gray;'>© made with love by satyajit</p>",
+    unsafe_allow_html=True
+)
